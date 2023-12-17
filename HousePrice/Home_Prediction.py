@@ -1,4 +1,3 @@
-
 # Import Libraries
 import pandas as pd
 from sklearn.linear_model import LinearRegression
@@ -84,7 +83,9 @@ for feature in X.columns:
 
 
 # Visualize data
-visualization_name = st.line_chart(X)
+visualization_name = st.bar_chart(X)
+
+visualization_name = st.bar_chart(y)
 
 # Convert input features to DataFrame
 input_df = pd.DataFrame([input_features])
