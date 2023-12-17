@@ -1,3 +1,4 @@
+
 # Import Libraries
 import pandas as pd
 from sklearn.linear_model import LinearRegression
@@ -80,6 +81,10 @@ st.sidebar.header("Input Features")
 input_features = {}
 for feature in X.columns:
     input_features[feature] = st.sidebar.slider(f"Select {feature}", float(X[feature].min()), float(X[feature].max()), float(X[feature].mean()))
+
+
+# Visualize data
+visualization_name = st.line_chart(X)
 
 # Convert input features to DataFrame
 input_df = pd.DataFrame([input_features])
